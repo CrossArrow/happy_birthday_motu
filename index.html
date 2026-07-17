@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Happy Birthday, Motu</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- single canvas: stars, nebula, dust, shooting stars -->
+  <canvas id="sky"></canvas>
+
+  <!-- foreground content -->
+  <main id="overlay">
+    <div id="messages" aria-live="polite"></div>
+
+    <div id="reveal">
+      <h1 id="happyBirthday">Happy Birthday</h1>
+      <h2 id="signature">Motu&nbsp;❤️</h2>
+    </div>
+
+    <button id="continueBtn" type="button">Begin the Journey&nbsp;✨</button>
+  </main>
+
+  <!-- ============================================================
+       PHASE 2 — cake, sealed letter, gallery, finale
+       Revealed after "Begin the Journey" is tapped. Sits over the
+       same starfield, so the sky keeps breathing behind everything.
+       ============================================================ -->
+  <main id="phase2" hidden>
+
+    <!-- CAKE -->
+    <section class="scene" id="scene-cake">
+      <p class="scene-eyebrow">a little tradition</p>
+      <h2 class="scene-title">Make a Wish, Motu</h2>
+      <div class="cake-stage">
+        <div class="candles" id="candles"></div>
+        <div class="cake-tiers">
+          <div class="tier tier-top"></div>
+          <div class="tier tier-mid"></div>
+          <div class="tier tier-base"><span class="tier-glow" id="cakeGlow"></span></div>
+        </div>
+      </div>
+      <p class="wish-line" id="wishLine">tap each candle to blow it out</p>
+      <button class="ghost-btn next-btn" id="toLetterBtn">Continue</button>
+    </section>
+
+    <!-- SEALED LETTER -->
+    <section class="scene" id="scene-letter">
+      <p class="scene-eyebrow">sealed, just for you</p>
+      <h2 class="scene-title">A Letter Among the Stars</h2>
+      <div class="seal" id="seal"><span>✦</span></div>
+      <p class="seal-hint" id="sealHint">tap the seal to open it</p>
+      <article class="letter-card" id="letterCard">
+        <p>[[LETTER_PLACEHOLDER — open script.js or this HTML, find LETTER_PLACEHOLDER, and paste Jiju's letter here.]]</p>
+        <p class="letter-sign">— Jiju</p>
+      </article>
+      <button class="ghost-btn next-btn" id="toGalleryBtn">Continue</button>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="scene" id="scene-gallery">
+      <p class="scene-eyebrow">moments we've kept</p>
+      <h2 class="scene-title">A Few of Our Favourites</h2>
+      <div class="gallery-grid" id="galleryGrid"></div>
+      <button class="ghost-btn next-btn show" id="toFinaleBtn">Continue</button>
+    </section>
+
+    <!-- FINALE -->
+    <section class="scene" id="scene-finale">
+      <p class="scene-eyebrow">and so,</p>
+      <h1 class="finale-title">Happy Birthday</h1>
+      <h2 class="finale-signature">Motu&nbsp;❤️</h2>
+      <p class="finale-note">may this year hold everything you deserve, and then some.</p>
+      <button class="ghost-btn" id="replayBtn">Watch it again</button>
+      <div class="creator-logo">
+        <img src="assets/photos/eyelashes.png" alt="Lash Crafters">
+      </div>
+    </section>
+
+  </main>
+
+  <!-- EASTER EGG — a wishing star hidden in the sky -->
+  <div class="egg-modal" id="eggModal">
+    <div class="egg-card">
+      <p class="scene-eyebrow">you found it</p>
+      <p class="egg-message">Some people scroll past the sky without ever looking up.<br>You always looked up first.<br><br>That's exactly why this one was hidden just for you.</p>
+      <button class="ghost-btn" id="closeEgg">close</button>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX for gallery photos -->
+  <div class="lightbox" id="lightbox">
+    <img id="lightboxImg" src="" alt="A shared memory">
+  </div>
+
+  <audio id="bgMusic" loop preload="none">
+    <source src="assets/audio/tum_ho.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
