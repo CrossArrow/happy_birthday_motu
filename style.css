@@ -267,7 +267,7 @@ html, body {
   pointer-events: none;
 }
 .letter-card.show { opacity: 1; transform: translateY(0) scale(1); position: relative; pointer-events: auto; }
-.letter-card p { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; line-height: 1.8; color: var(--cream); text-align: left; margin: 0 0 1rem; }
+.letter-card p { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; line-height: 1.8; color: var(--cream); text-align: left; margin: 0 0 1rem; }
 .letter-sign { text-align: right; font-family: 'Great Vibes', cursive; font-size: 1.7rem; color: var(--gold); margin-top: 0.6rem; }
 
 /* ---- GALLERY ---- */
