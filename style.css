@@ -428,6 +428,20 @@ html, body {
 @media (max-width:480px){
 
 #continueBtn,
+
+.scene{
+    padding:28vh 5vw;
+}
+
+.letter-card{
+    width:90vw;
+    padding:1.2rem;
+}
+
+.letter-card p{
+    font-size:0.8rem;
+}
+
 .ghost-btn{
 
     width:90%;
