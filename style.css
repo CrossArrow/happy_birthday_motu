@@ -432,7 +432,7 @@ html, body {
 .letter-card p{
     font-size:.85rem;
 }
-   
+
 .ghost-btn{
 
     width:90%;
@@ -443,7 +443,8 @@ html, body {
 
 .gallery-grid{
 
-    grid-template-columns:1fr;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    max-width: 18rem;
 
 }
 
