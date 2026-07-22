@@ -429,19 +429,10 @@ html, body {
 
 #continueBtn,
 
-.scene{
-    padding:28vh 5vw;
-}
-
-.letter-card{
-    width:90vw;
-    padding:1.2rem;
-}
-
 .letter-card p{
-    font-size:0.8rem;
+    font-size:.85rem;
 }
-
+   
 .ghost-btn{
 
     width:90%;
@@ -466,7 +457,7 @@ html, body {
 
 .cake-stage{
 
-    width:80vw;
+    width:50vw;
 
 }
 
