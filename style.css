@@ -259,7 +259,7 @@ html, body {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-radius: 4px;
-  padding: 2.6rem 2.4rem;
+  padding: 2.2rem 2.4rem;
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
   opacity: 0; transform: translateY(24px) scale(0.97);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -267,7 +267,7 @@ html, body {
   pointer-events: none;
 }
 .letter-card.show { opacity: 1; transform: translateY(0) scale(1); position: relative; pointer-events: auto; }
-.letter-card p { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; line-height: 1.8; color: var(--cream); text-align: left; margin: 0 0 1rem; }
+.letter-card p { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; line-height: 1.8; color: var(--cream); text-align: left; margin: 0 0 1rem; }
 .letter-sign { text-align: right; font-family: 'Great Vibes', cursive; font-size: 1.7rem; color: var(--gold); margin-top: 0.6rem; }
 
 /* ---- GALLERY ---- */
@@ -387,5 +387,97 @@ html, body {
         opacity:0;
 
     }
+
+}
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width:768px){
+
+.scene{
+    padding:5vh 5vw;
+}
+
+.letter-card{
+    width:90vw;
+    padding:1.5rem;
+}
+
+.letter-card p{
+    font-size:1rem;
+}
+
+.creator-logo{
+    right:15px;
+    bottom:15px;
+}
+
+.creator-logo img{
+    width:70px;
+}
+
+}
+
+
+/* =========================================
+   PHONES
+========================================= */
+
+@media (max-width:480px){
+
+#continueBtn,
+.ghost-btn{
+
+    width:90%;
+    padding:14px;
+    font-size:.75rem;
+
+}
+
+.gallery-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.photo-frame{
+
+    width:100%;
+    aspect-ratio:4/5;
+    height:auto;
+
+}
+
+.cake-stage{
+
+    width:80vw;
+
+}
+
+.candles{
+
+    gap:10px;
+
+}
+
+.candle{
+
+    height:34px;
+
+}
+
+.wish-line{
+
+    font-size:.9rem;
+
+}
+
+.scene-title{
+
+    margin-bottom:1.5rem;
+
+}
 
 }
